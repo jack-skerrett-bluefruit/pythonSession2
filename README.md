@@ -3,8 +3,10 @@
 Python scripts for the second Python session.
 Be nice xo
 
-- Adding try/except for usage parameters
+- Defs
 - Adding modules for more power
 - Try/except modules
-- Defs
+- Adding try/except for usage parameters
+- Using argparse
+- Introduce __name__ = __main__
 
