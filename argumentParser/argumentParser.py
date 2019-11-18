@@ -1,4 +1,4 @@
-import argparse
+import sys
 
 
 def fib(n):
@@ -10,22 +10,17 @@ def fib(n):
 
 
 def Main():  
-    parser = argparse.ArgumentParser()
-    parser.add_argument("num", help="The supplied number will return the corresponding value in the Fibonacci sequence.", type=int)
-    parser.add_argument("-o", "--output", help="Output result to a file", action="store_true")
+    answer = fib(int(sys.argv[1]))
+    print("The " + str(sys.argv[1]) +"th " + "number in the Fibonacci sequence is " + str(answer)
 
-    args = parser.parse_args()
-    answer = fib(args.num)
-    print("The " + str(args.num) +"th " + "number in the Fibonacci sequence is " + str(answer))
 
-    if args.output:
-        f = open("result.txt", "w+")
-        f.write(str(answer))
-        f.close()
+
+
 
 
 def imported():
     print("You've got to run me as your main to get my Fibonacci goodness")
+    print(__name__)
 
 if __name__ == "__main__":
     Main()
